@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Detection Result</title>
+  <style>
+    body {
+      background-color: #eef2f3;
+      text-align: center;
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+    img, video {
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    a {
+      display: block;
+      margin-top: 1rem;
+      background-color: #007bff;
+      padding: 0.7rem;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>🖼 Detection Output</h2>
+  {% if image_path.endswith('.mp4') %}
+    <video controls>
+      <source src="{{ image_path }}" type="video/mp4">
+    </video>
+  {% else %}
+    <img src="{{ image_path }}" alt="Detected Output">
+  {% endif %}
+  <a href="/">🔙 Back to Upload</a>
+</body>
+</html>

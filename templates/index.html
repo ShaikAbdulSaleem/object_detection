@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Detection Portal</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: #333;
+    }
+    .card {
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 500px;
+    }
+    input[type="file"], button {
+      padding: 0.8rem;
+      margin: 1rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #ff6f61;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e85c50;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔍 Object Detection</h1>
+  <div class="card">
+    <form action="/upload-image" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/*" required>
+      <button type="submit">Upload Image</button>
+    </form>
+    <form action="/upload-video" method="post" enctype="multipart/form-data">
+      <input type="file" name="video" accept="video/*" required>
+      <button type="submit">Upload Video</button>
+    </form>
+    <form action="/live" method="get">
+      <button type="submit">Start Webcam Detection</button>
+    </form>
+  </div>
+</body>
+</html>
