@@ -1,4 +1,5 @@
-flask
-ultralytics
+Flask
+gunicorn
 opencv-python
-werkzeug
+ultralytics
+
